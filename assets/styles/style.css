@@ -1,0 +1,178 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f6f8;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+#content {
+    flex: 5; 
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+#content article {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+#content article h2 {
+    color: #1a1a2e;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid red;
+}
+
+aside {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.card img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 6px;
+}
+
+nav {
+    background-color: #151525;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    font-size: 16px;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: red;
+    color: #151525;
+}
+
+.jumbotron {
+    background: linear-gradient(to bottom, #1a1a2e, #151525);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.jumbotron h1 {
+    font-size: bold;
+    margin-bottom: 0.8rem;
+    color: red;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.jumbotron p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Footer styles */
+footer {
+    padding: 15px;
+    background-color: #151525;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-top: 3px solid red;
+}
+
+header{
+    display: inline;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    #content {
+        width: 100%;
+        max-width: 800px;
+    }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
+        nav ul {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+    
+        .jumbotron {
+            padding: 2rem 1rem;
+        }
+    
+        .jumbotron h1 {
+            font-size: 1.8rem;
+        }
+    
+        .jumbotron p {
+            font-size: 18px;
+        }
+    
+        main {
+            padding: 10px;
+        }
+    
+        #content article {
+            padding: 1.2rem;
+        }
+    }
+    
+}
